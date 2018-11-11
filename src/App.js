@@ -1,26 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import styled from "styled-components";
+import "react-tabs/style/react-tabs.css";
+
+import Weather from "./Weather";
+
+const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+const Header = styled.div`
+  padding: 20px;
+  font-size: 24pt;
+  font-weight: bold;
+`;
+
+const TabHeader = styled.div`
+  font-weight: 200;
+`;
+
+const Container = styled.div`
+  // padding: 20px;
+`;
+
+const TabHeaders = DAYS.map(day => (
+  <Tab>
+    <TabHeader>{day}</TabHeader>
+  </Tab>
+));
+
+const TabPanels = DAYS.map(day => (
+  <TabPanel>
+    <Weather day={day} />
+  </TabPanel>
+));
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container>
+        <Header>My Cool Weather App</Header>
+        <Tabs>
+          <TabList>{TabHeaders}</TabList>
+
+          {TabPanels}
+        </Tabs>
+      </Container>
     );
   }
 }
