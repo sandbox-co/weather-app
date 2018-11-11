@@ -13,16 +13,19 @@ const Header = styled.div`
   font-weight: bold;
 `;
 
+// add styles here for the container div
+const Container = styled.div``;
+
+// add inline styles here for the tab header container
+const TabHeaderContainerStyle = {};
+
+// add styles here for the tab header text
 const TabHeader = styled.div`
   font-weight: 200;
 `;
 
-const Container = styled.div`
-  // padding: 20px;
-`;
-
 const TabHeaders = DAYS.map(day => (
-  <Tab>
+  <Tab style={TabHeaderContainerStyle}>
     <TabHeader>{day}</TabHeader>
   </Tab>
 ));
