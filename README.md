@@ -1,9 +1,9 @@
-# weatherapp
+# weather app
 
 ### Create an application that displays the weather forecast  for each day of the week. 
 
 ## In your app, aim to include:
-* A separate page, tab, or section for each day of the week. This can be done either through using a router (where each page represents a different day - nom install react-router), through different tabs (see http://reactcommunity.org/react-tabs/), or just setting up five containers (could be a simple div) for each day of the forecastable week.  
+* A separate page, tab, or section for each day of the week. This can be done either through using a router (where each page represents a different day - yarn add react-router), through different tabs (see http://reactcommunity.org/react-tabs/), or just setting up five containers (could be a simple div) for each day of the forecastable week.  
 * Display weather information (high temperature, low temperature) for a given day
 
 ## Where do I get the data? 
